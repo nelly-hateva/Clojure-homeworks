@@ -1,0 +1,20 @@
+(defn abs [number]
+  (if (< number 0)
+      (- 0 number)
+      number))
+
+(defn bisect [f neg-point pos-point close-enough?]
+  (let [middle-point (/ (+ neg-point pos-point) 2)]
+  (cond
+    (close-enough? neg-point pos-point) middle-point
+    (= (f middle-point) 0) middle-point
+    (> (f middle-point) 0) (bisect f neg-point middle-point close-enough?)
+    :else (bisect f middle-point pos-point close-enough?))))
+
+(defn make-bisector [tolerance])
+
+(defn make-queue)
+(defn push-to-queue [q x])
+(defn peek-at-queue [q])
+(defn pop-from-queue [q])
+(defn empty-queue? [q])
