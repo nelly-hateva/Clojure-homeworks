@@ -24,4 +24,4 @@
 (defn pop-from-queue [q]
   (vec (rest q)))
 (defn empty-queue? [q]
-  (if (= (next q) nil) true))
+  (if (= (seq q) nil) true))
