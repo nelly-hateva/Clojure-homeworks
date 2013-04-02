@@ -1,0 +1,11 @@
+(defn make-account []
+  (atom 0 :validator integer?))
+
+(def balance @)
+
+(defn deposit [account amount]
+  (swap! account + amount)
+  account)
+
+(defn withdraw [account amount]
+  (deposit account (- amount)))

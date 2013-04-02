@@ -1,0 +1,26 @@
+(defn game [player0 player1]
+  [0 0])
+
+(defn first-three [vector]
+  (if (< (count vector) 3)
+      []
+      (subvec vector 0 3)))
+
+(defn last-three [vector]
+  (if (< (count vector) 3)
+      []
+      (subvec vector (- (count vector) 3))))
+
+(defn vectors-player [player]
+  (filter vector? (vals player)))
+
+(defn count-element [element coll]
+  (count (filter #(= element %) coll)))
+
+(defn first-last-three-score [player score]
+  (let [firsts (mapv first-three (vectors-player player))
+        lasts (mapv last-three (vectors-player player))
+        [head & tail] firsts]
+    (if 
+    (recur player (count-element head lasts))))
+    

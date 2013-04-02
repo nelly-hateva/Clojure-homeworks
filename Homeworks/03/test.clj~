@@ -1,0 +1,26 @@
+(use 'clojure.test)
+
+(load-file "solution.clj")
+
+(deftest sample-test
+  (testing "COUNT"
+    (is (= (do (reset-counter!) (count!) (count!) (get-count))
+         2)
+      "counter: two increments"))
+ (testing "ADD-METRICS"
+   (let [add (add-metrics + :add)]
+     (is (= (do (add 1 1)
+                (calls :add 1 1))
+            1)
+         "add-metrics: 1 call")))
+  (testing "ADD-EVENTS"
+    (let [events (atom [])
+        add-to-events #(swap! events conj %&)
+        add (add-events + :add)]
+    (is (= (binding [*before* {:add add-to-events}]
+             (add 1 2 3)
+             @events)
+           [[1 2 3]])
+        "add-events: before"))))
+
+(run-tests)
