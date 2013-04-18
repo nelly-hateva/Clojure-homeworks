@@ -1,6 +1,0 @@
-(def ^:dynamic *before* 0)
-(def ^:dynamic *after* 0)
-(defn add-events [fun fkey])
-(def ^:dynamic *cache-hit* 0)
-(defn cache [func])
-(defn annotated [fvar])
