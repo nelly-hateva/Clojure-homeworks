@@ -13,11 +13,11 @@
 * Тръгва от някой магазин.
 * Хваща ескалатор до първия свободен магазин (без друг обитател в него). Редът, в който се пробват магазините е следния:
 
-![Координати](https://raw.github.com/fmi/clojure-homework/master/tasks/04/order-of-trying.png)
+![Координати](https://raw.github.com/nelly-hateva/Clojure-homeworks/master/Homeworks/04/order-of-trying.png)
 
 Първо горе-вляво, после долу-вдясно, после долу вляво и накрая горе-вдясно. Ако някой от тези опити излиза извън мола, просто отиваме от другата му страна в същата посока:
 
-![Координати](https://raw.github.com/fmi/clojure-homework/master/tasks/04/out-of-bounds.png)
+![Координати](https://raw.github.com/nelly-hateva/Clojure-homeworks/master/Homeworks/04/out-of-bounds.png)
 
 * Движи се по този този начин или докато направи 100 премествания или докато не бъде заклещен и няма къде да ходи. Което и от двете да се случи, обитателят спира и никога повече не се мърда.
 
