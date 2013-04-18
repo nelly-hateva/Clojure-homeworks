@@ -4,7 +4,7 @@
 
 Молът е матрица 4×4 като всяка клетка е магазин. Координатите са като на тази картинка:
 
-![Координати](https://raw.github.com/nelly-hateva/master/Homeworks/04/coordinates.png)
+![Координати](https://raw.github.com/nelly-hateva/Clojure-homeworks/master/Homeworks/04/coordinates.png)
 
 В някои от магазините има обитатели, чиято цел е постоянно да обикалят по ескалаторите в мола и да ходят по магазините. В един магазин никога няма повече от един обитател.
 
